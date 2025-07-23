@@ -1,0 +1,11 @@
+{
+  "lib/solmate": {
+    "rev": "fadb2e2778adbf01c80275bfb99e5c14969d964b"
+  },
+  "lib/v2-core": {
+    "rev": "4dd59067c76dea4a0e8e4bfdda41877a6b16dedc"
+  },
+  "lib/forge-std": {
+    "rev": "74cfb77e308dd188d2f58864aaf44963ae6b88b1"
+  }
+}

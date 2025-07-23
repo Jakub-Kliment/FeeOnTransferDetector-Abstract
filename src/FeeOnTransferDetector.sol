@@ -8,6 +8,8 @@ import "solmate/utils/FixedPointMathLib.sol";
 import "v2-core/interfaces/IUniswapV2Pair.sol";
 import "./lib/UniswapV2Library.sol";
 
+import {console} from "forge-std/console.sol";
+
 /// @notice Struct of fee related data for a token
 struct TokenFees {
     uint256 buyFeeBps;
@@ -30,6 +32,7 @@ contract FeeOnTransferDetector {
 
     error SameToken();
     error PairLookupFailed();
+    error PairAddressNull();
     error UnknownExternalTransferFailure(string reason);
 
     uint256 constant BPS = 10_000;
@@ -73,6 +76,7 @@ contract FeeOnTransferDetector {
         }
 
         address pairAddress = UniswapV2Library.pairFor(factoryV2, token, baseToken);
+        console.log("pairAddress: ", pairAddress);
 
         // If the token/baseToken pair exists, get token0.
         // Must do low level call as try/catch does not support case where contract does not exist.

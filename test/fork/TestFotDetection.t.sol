@@ -16,10 +16,20 @@ contract FotDetectionTest is Test {
 
     function testPenguToken() public {
         address token = 0x9eBe3A824Ca958e4b3Da772D2065518F009CBa62;
-        uint256 expectedBuyFeeBps = 500;
-        uint256 expectedSellFeeBps = 500;
+        uint256 expectedBuyFeeBps = 0;
+        uint256 expectedSellFeeBps = 0;
 
         TokenFees memory fees = detector.validate(token, WETH, 10000);
+        assertEq(fees.buyFeeBps, expectedBuyFeeBps);
+        assertEq(fees.sellFeeBps, expectedSellFeeBps);
+    }
+
+    function testUSDCToken() public {
+        address USDC = 0x84A71ccD554Cc1b02749b35d22F684CC8ec987e1;
+        uint256 expectedBuyFeeBps = 0;
+        uint256 expectedSellFeeBps = 0;
+
+        TokenFees memory fees = detector.validate(USDC, WETH, 10000);
         assertEq(fees.buyFeeBps, expectedBuyFeeBps);
         assertEq(fees.sellFeeBps, expectedSellFeeBps);
     }

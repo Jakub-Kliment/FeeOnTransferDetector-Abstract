@@ -4,7 +4,11 @@ out = "out"
 libs = ["lib"]
 solc_version = '0.8.19'
 # no_match_path = "*/fork/*"
+fallback_oz = true
 evm_version = "shanghai"
+
+[profile.default.zksync]
+enable_eravm_extensions = true
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
 

@@ -15,12 +15,11 @@ struct DeployParameters {
 abstract contract DeployFeeCollector is Script {
     DeployParameters internal params;
 
-    //address public constant OWNER = ;
+    // only abstract address
+    address public constant OWNER = 0x38fA188998F7b504C42413BE856FDa6AdA1d3a4F;
     address constant PERMIT2 = 0x0000000000225e31D15943971F47aD3022F714Fa;
     address constant UNIVERSAL_ROUTER = 0xE1b076ea612Db28a0d768660e4D81346c02ED75e;
-
-    // For mainnet parameters, deploys the FeeCollector to 0x000000fee13a103A10D593b9AE06b3e05F2E7E1c
-    bytes32 constant SALT = bytes32(uint256(0x0000000000000000000000000000000000000000e6a691a183251100795200f0));
+    bytes32 constant SALT = 0x00;
 
     function setUp() public virtual {}
 

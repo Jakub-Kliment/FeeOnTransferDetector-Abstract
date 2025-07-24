@@ -10,7 +10,7 @@ contract FotDetectionTest is Test {
     address constant WETH = 0x3439153EB7AF838Ad19d56E1571FBD09333C2809; // WETH address on abstract
 
     function setUp() public {
-        vm.createSelectFork(vm.envString("JSON_RPC_PROVIDER_ABSTRACT"));
+        vm.createSelectFork(vm.envString("RPC_URL_ABSTRACT"));
         detector = new FeeOnTransferDetector(factoryV2);
     }
 
@@ -19,7 +19,7 @@ contract FotDetectionTest is Test {
         uint256 expectedBuyFeeBps = 0;
         uint256 expectedSellFeeBps = 0;
 
-        TokenFees memory fees = detector.validate(token, WETH, 10000);
+        TokenFees memory fees = detector.validate(token, WETH, 100);
         assertEq(fees.buyFeeBps, expectedBuyFeeBps);
         assertEq(fees.sellFeeBps, expectedSellFeeBps);
     }
@@ -29,7 +29,7 @@ contract FotDetectionTest is Test {
         uint256 expectedBuyFeeBps = 0;
         uint256 expectedSellFeeBps = 0;
 
-        TokenFees memory fees = detector.validate(USDC, WETH, 10000);
+        TokenFees memory fees = detector.validate(USDC, WETH, 100);
         assertEq(fees.buyFeeBps, expectedBuyFeeBps);
         assertEq(fees.sellFeeBps, expectedSellFeeBps);
     }

@@ -1,5 +1,5 @@
 # Util Contracts
-
+Adapted Util Contracts (FeeOnTransferDetector and FeeCollector) for deployment on Abstract L2 chain. Bellow are the addresses of deployed contracts which can be used to validate transfers or other actions.
 
 ## FeeOnTransferDetector
 A lens contract to fetch Fee-on-transfer token buy and sell fees
@@ -15,9 +15,12 @@ A lens contract to fetch Fee-on-transfer token buy and sell fees
 | 42161    | 0x37324D81e318260DC4f0fCb68035028eFdE6F50e | 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9 |
 | 42220    | 0x8eEa35913DdeD795001562f9bA5b282d3ac04B60 | 0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f |
 | 43114    | 0x8269d47c4910B8c87789aA0eC128C11A8614dfC8 | 0x5C346464d33F90bABaf70dB6388507CC889C1070 |
+| 2741     | 0xE7A2E123f78e241fcf98B9E506be0306815E070f |
+0x566d7510dEE58360a64C9827257cF6D0Dc43985E |
 
 ## FeeCollector
 The collector of interface fees that will be swapped and sent to Uniswap Labs.
+(Different address for Abstract)
 
 ### Deployment Addresses
 | Chain Id | Deployment Address                             | UniversalRouter Address                      | Permit2 Address                               | Fee Token Address                               |
@@ -32,3 +35,7 @@ The collector of interface fees that will be swapped and sent to Uniswap Labs.
 | 8453     | 0x5d64D14D2CF4fe5fe4e65B1c7E3D11e18D493091 | 0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD   | 0x000000000022d473030f116ddee9f6b43ac78ba3    | 0x833589fcd6edb6e08f4c7c32d4f71b54bda02913      |
 | 324      | 0xbCDdB5a0CB87166e1C1cc99A0f9736Be6f449dd8 | 0x28731BCC616B5f51dD52CF2e4dF0E78dD1136C06   | 0x0000000000225e31D15943971F47aD3022F714Fa    | 0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4      |
 | 7777777  | 0x33352C573Ee093408F1424E1eD22911Dfb590a43 | 0x2986d9721A49838ab4297b695858aF7F17f38014   | 0x000000000022d473030f116ddee9f6b43ac78ba3    | 0xCccCCccc7021b32EBb4e8C08314bD62F7c653EC4      |
+| 2741     | 0x6f79b5681Db690430AcE1dE7EF9DB75806A4Faf7 |
+0xE1b076ea612Db28a0d768660e4D81346c02ED75e   |
+0x0000000000225e31d15943971f47ad3022f714fa    |
+0x3439153EB7AF838Ad19d56E1571FBD09333C2809      |
